@@ -1,0 +1,150 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 3569 >>
+stream
+0.96 0.96 0.93 rg
+0 0 612 792 re f
+0.18 0.17 0.18 RG
+0.5 w
+54 42 504 0 l S
+BT /F2 20 Tf 54 730 Td (Hot 100 80s Charts Application Run Book) Tj ET
+BT /F1 10.5 Tf 54 694 Td (This run book explains the requirements, behavior, operating steps, and support notes for) Tj ET
+BT /F1 10.5 Tf 54 680 Td (the Streamlit application built around the 1980s Billboard Hot 100 dataset.) Tj ET
+BT /F1 10.5 Tf 54 659 Td (Application entry point: app.py) Tj ET
+BT /F1 10.5 Tf 54 638 Td (Database: hot100-80s.db) Tj ET
+BT /F1 10.5 Tf 54 617 Td (Source data: hot-100-80s.csv) Tj ET
+BT /F2 15 Tf 54 596 Td (Application Requirements) Tj ET
+BT /F1 10 Tf 62 572 Td (- Load hot-100-80s.csv into a SQLite database named hot100-80s.db.) Tj ET
+BT /F1 10 Tf 62 553 Td (- Provide a Streamlit app with a main page, year page, song page, and common navigation menu.) Tj ET
+BT /F1 10 Tf 62 534 Td (- Set the Streamlit page title to 'Welcome to the 80s Hot 100 Charts'.) Tj ET
+BT /F1 10 Tf 62 515 Td (- On the main page, show the top 10 most successful songs of all time using a score based on) Tj ET
+BT /F1 10 Tf 62 501 Td (Hot 100 position and time on chart.) Tj ET
+BT /F1 10 Tf 62 482 Td (- On the year page, allow the user to select a chart year. The default is the highest year) Tj ET
+BT /F1 10 Tf 62 468 Td (available in the database.) Tj ET
+BT /F1 10 Tf 62 449 Td (- On the year page, show the top 50 songs for the selected year and allow each song to be) Tj ET
+BT /F1 10 Tf 62 435 Td (opened on the song page.) Tj ET
+BT /F1 10 Tf 62 416 Td (- On the song page, show a chronological Hot 100 position timeline for the selected song.) Tj ET
+BT /F1 10 Tf 62 397 Td (- Provide a dark mode option and a shared 80s music montage background across all pages.) Tj ET
+BT /F2 15 Tf 54 378 Td (What The Application Does) Tj ET
+BT /F1 10 Tf 62 354 Td (- The app presents an interactive view of Hot 100 chart activity from 1980 through 1989. It) Tj ET
+BT /F1 10 Tf 62 340 Td (ranks songs by a success score that rewards both high chart placement and longevity.) Tj ET
+BT /F1 10 Tf 62 321 Td (- The success score is calculated as the sum of 101 minus the Hot 100 position for every weekly) Tj ET
+BT /F1 10 Tf 62 307 Td (chart appearance. A number 1 week therefore contributes 100 points, while a number 100 week) Tj ET
+BT /F1 10 Tf 62 293 Td (contributes 1 point.) Tj ET
+BT /F1 10 Tf 62 274 Td (- The main page visualizes the top 10 songs across the full decade.) Tj ET
+BT /F1 10 Tf 62 255 Td (- The year page filters rankings to a selected year and supports click-through song navigation.) Tj ET
+BT /F1 10 Tf 62 236 Td (- The song page shows the selected song's week-by-week chart history with the y-axis reversed) Tj ET
+BT /F1 10 Tf 62 222 Td (so stronger chart positions appear higher on the chart.) Tj ET
+BT /F2 15 Tf 54 203 Td (Data And Database) Tj ET
+BT /F1 10 Tf 62 179 Td (- The CSV file contains one row per song per chart week with these fields: chart_week,) Tj ET
+BT /F1 10 Tf 62 165 Td (current_week, title, performer, last_week, peak_pos, and wks_on_chart.) Tj ET
+BT /F1 10 Tf 62 146 Td (- load_hot100.py rebuilds the hot100 table from the CSV and derives the year column from) Tj ET
+BT /F1 10 Tf 62 132 Td (chart_week.) Tj ET
+BT /F1 10 Tf 62 113 Td (- The generated database contains indexes for year, song lookup, and chart week lookup to keep) Tj ET
+BT /F1 10 Tf 62 99 Td (the Streamlit reports responsive.) Tj ET
+BT /F1 10 Tf 62 80 Td (- The current loaded database has 52,200 chart rows covering years 1980 through 1989.) Tj ET
+BT /F1 8 Tf 54 30 Td (Hot 100 80s Run Book | Page 1 of 3) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2983 >>
+stream
+0.96 0.96 0.93 rg
+0 0 612 792 re f
+0.18 0.17 0.18 RG
+0.5 w
+54 42 504 0 l S
+BT /F2 15 Tf 54 730 Td (How To Run) Tj ET
+BT /F1 10 Tf 62 706 Td (- Install dependencies with: pip install -r requirements.txt) Tj ET
+BT /F1 10 Tf 62 687 Td (- Rebuild the database when the CSV changes with: python3 load_hot100.py) Tj ET
+BT /F1 10 Tf 62 668 Td (- Start the app with: streamlit run app.py) Tj ET
+BT /F1 10 Tf 62 649 Td (- If streamlit is not on PATH, use: python3 -m streamlit run app.py) Tj ET
+BT /F1 10 Tf 62 630 Td (- Open the local URL printed by Streamlit, commonly http://localhost:8501 or) Tj ET
+BT /F1 10 Tf 62 616 Td (http://127.0.0.1:8501.) Tj ET
+BT /F2 15 Tf 54 597 Td (Navigation And User Workflow) Tj ET
+BT /F1 10 Tf 62 573 Td (- Use the sidebar navigation menu to move between Main Page, Year Page, and Song Page.) Tj ET
+BT /F1 10 Tf 62 554 Td (- Use the sidebar Dark mode toggle to switch between light and dark visual themes. The) Tj ET
+BT /F1 10 Tf 62 540 Td (background image remains visible on all pages with an overlay that preserves readability.) Tj ET
+BT /F1 10 Tf 62 521 Td (- On Year Page, select a year from the dropdown. The highest available year is selected by) Tj ET
+BT /F1 10 Tf 62 507 Td (default.) Tj ET
+BT /F1 10 Tf 62 488 Td (- Click a song button in the top 50 report to open that song on the Song Page.) Tj ET
+BT /F1 10 Tf 62 469 Td (- On Song Page, the dropdown can also be used to select any song directly.) Tj ET
+BT /F2 15 Tf 54 450 Td (File Inventory) Tj ET
+BT /F1 10 Tf 62 426 Td (- app.py: Streamlit application, navigation, queries, charts, theme, and background styling.) Tj ET
+BT /F1 10 Tf 62 407 Td (- load_hot100.py: CSV-to-SQLite loading script.) Tj ET
+BT /F1 10 Tf 62 388 Td (- hot-100-80s.csv: Source chart data.) Tj ET
+BT /F1 10 Tf 62 369 Td (- hot100-80s.db: SQLite database used by the app.) Tj ET
+BT /F1 10 Tf 62 350 Td (- assets/hot100_80s_montage.png: Shared page background image.) Tj ET
+BT /F1 10 Tf 62 331 Td (- generate_80s_background.py: Regenerates the background asset.) Tj ET
+BT /F1 10 Tf 62 312 Td (- requirements.txt: Python package dependencies.) Tj ET
+BT /F1 10 Tf 62 293 Td (- docs/Hot_100_80s_Run_Book.pdf: This run book.) Tj ET
+BT /F2 15 Tf 54 274 Td (Validation Checklist) Tj ET
+BT /F1 10 Tf 62 250 Td (- Run python3 load_hot100.py and confirm it reports 52,200 rows.) Tj ET
+BT /F1 10 Tf 62 231 Td (- Run python3 -m py_compile app.py load_hot100.py generate_80s_background.py to check syntax.) Tj ET
+BT /F1 10 Tf 62 212 Td (- Start Streamlit and confirm the app loads without errors.) Tj ET
+BT /F1 10 Tf 62 193 Td (- Confirm the main page shows a top 10 chart.) Tj ET
+BT /F1 10 Tf 62 174 Td (- Confirm the year dropdown defaults to 1989.) Tj ET
+BT /F1 10 Tf 62 155 Td (- Confirm clicking a year-page song opens that song on the song page.) Tj ET
+BT /F1 10 Tf 62 136 Td (- Confirm the dark mode toggle changes page colors while preserving legibility.) Tj ET
+BT /F1 8 Tf 54 30 Td (Hot 100 80s Run Book | Page 2 of 3) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 825 >>
+stream
+0.96 0.96 0.93 rg
+0 0 612 792 re f
+0.18 0.17 0.18 RG
+0.5 w
+54 42 504 0 l S
+BT /F2 15 Tf 54 730 Td (Troubleshooting) Tj ET
+BT /F1 10 Tf 62 706 Td (- If the app reports that hot100-80s.db is missing, run python3 load_hot100.py from the project) Tj ET
+BT /F1 10 Tf 62 692 Td (directory.) Tj ET
+BT /F1 10 Tf 62 673 Td (- If Streamlit is not found, install requirements or run it as a Python module with python3 -m) Tj ET
+BT /F1 10 Tf 62 659 Td (streamlit run app.py.) Tj ET
+BT /F1 10 Tf 62 640 Td (- If the background image is missing, run python3 generate_80s_background.py.) Tj ET
+BT /F1 10 Tf 62 621 Td (- If charts are blank, verify that hot100-80s.db contains the hot100 table and that the CSV) Tj ET
+BT /F1 10 Tf 62 607 Td (load completed successfully.) Tj ET
+BT /F1 8 Tf 54 30 Td (Hot 100 80s Run Book | Page 3 of 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000134 00000 n 
+0000000204 00000 n 
+0000000279 00000 n 
+0000003900 00000 n 
+0000004036 00000 n 
+0000007071 00000 n 
+0000007207 00000 n 
+0000008083 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+8220
+%%EOF
